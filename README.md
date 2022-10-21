@@ -83,3 +83,68 @@ int main()
     if(0) printf("不是0都成立\n");
 }
 ```
+```
+# week07-1
+## 很長很長的整數, 要用 long long int
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n=123456789123456789;
+    printf("%d\n",n);
+    long long int a=123456789123456789;
+    printf("%lld\n",a);
+}
+```
+# week07-2
+## 回來用long long int 複習最大公因數了。
+```cpp
+#include <stdio.h>
+int main()
+{
+    long long int a,b;
+    scanf("%lld %lld",&a,&b);
+    long long int ans;
+    for(long long int i=1;i<=a;i++) {
+        if(a%i == 0&& b%i == 0) ans=i;
+    }
+    printf("答案是%lld\n",ans);
+}
+```
+```
+# week07-3
+## 前面的暴力法真的很慢,所以我們要改用輾轉相除法
+```cpp
+#include <stdio.h>
+int main()
+{
+    long long int a,b,c;
+    scanf("%lld%lld",&a,&b);
+
+    while (1) {
+        c=a%b;
+        printf("%lld %lld %lld\n",a,b,c);
+        if(c==0) break;
+        a=b;
+        b=c;
+    }
+    printf("答案是%lld", b);
+}
+```
+# week07-4
+## 倒過來的剝皮法
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n=123456;
+
+    while(n>0) {
+        printf("個位數是:%d\n",n%10);
+        n = n/10;
+    }
+}
+```
+
+
+
