@@ -1,5 +1,10 @@
 # 2022c
 從前從前有一個.......continue
+模板
+# week
+## 
+```cpp
+```
 # week06-1
 ##  重點其實是要先把樓層的鷹架印出來
 ```cpp
@@ -83,7 +88,6 @@ int main()
     if(0) printf("不是0都成立\n");
 }
 ```
-```
 # week07-1
 ## 很長很長的整數, 要用 long long int
 ```cpp
@@ -110,7 +114,6 @@ int main()
     }
     printf("答案是%lld\n",ans);
 }
-```
 ```
 # week07-3
 ## 前面的暴力法真的很慢,所以我們要改用輾轉相除法
@@ -145,6 +148,105 @@ int main()
     }
 }
 ```
+# week08-1
+## 只有2個for迴圈時,口訣是先能畫出正方形。再來的關鍵, 是空格有幾個。空格有n-i個。
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+
+    for(int i=1;i<=n;i++) {
+        for(int k=1;k<=n;k++) {
+            if(k<=n-i) printf(" ");
+            else printf("*");
+        }
+        printf("\n");
+    }
+}
+```
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+
+    for(int i=1;i<=n;i++) {
+        for(int k=1;k<=n;k++) {
+            printf("%c",(k<=n-i)?' ':'*');
+        }
+        printf("\n");
+    }
+}
+```
+# week08-2
+## 用了2個for迴圈
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d",&n);
+
+    int i=1;
+    while(i<=n) {
+        int k=1;
+        while(k<=n) {
+            printf("%c",(k<=n-i)?' ':'*');
+            k++;
+        }
+        i++;
+        printf("\n");
+    }
+}
+```
+# week08-3
+## 使用flag迴圈立旗做判斷
+```cpp
+#include <stdio.h>
+int main()
+{
+    printf("判斷是不是質數:");
+    int n;
+    scanf("%d",&n);
+
+    int bad=0;
+    for(int i=2;i<2;i++) {
+        if(n%i==0) bad=1;
+    }
+    if(bad==0) printf("%d是質數",n);
+    else printf("%d不是質數",n);
+}
+```
+# week08-4
+## "列出質數" 
+```cpp
+#include <stdio.h>
+int main()
+{
+	int a;
+	scanf("%d",&a);
+
+	for(int n=2;n<=a;n++) {
+
+		int bad=0;
+		for(int i=2;i<n;i++) {
+			if(n%i==0) bad=1;
+		}
+		if(bad==0) printf("%d ",n);
+	}
+}
+```
+# week
+## 
+```cpp
+```
+
+
+
+
 
 
 
