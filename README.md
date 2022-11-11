@@ -239,9 +239,36 @@ int main()
 	}
 }
 ```
-# week
+# week10-1
 ## 
 ```cpp
+#include <stdio.h>
+int main()
+{
+    ///int a;
+    int a[4] = {10,20,30,40};
+
+    printf("a[0]%d\n",a[0]);
+    printf("a[1]%d\n",a[1]);
+    printf("a[2]%d\n",a[2]);
+    printf("a[3]%d\n",a[3]);
+}
+```
+# week10-2
+## 
+```cpp
+#include <stdio.h>
+int main()
+{
+    int a[4] = {10,20,30,40};
+
+    for(int i=0;i<4;i++) {
+        printf("%d\n",a[i]);
+    }
+    for(int i=3;i>=0;i--) {
+    printf("%d\n",a[i]);
+    }
+}
 ```
 
 
